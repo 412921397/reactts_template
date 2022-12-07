@@ -5,6 +5,8 @@ import { shallowEqual, useDispatch, useSelector } from '@/store';
 import { changeCountAction, changeMessageAction } from '@/store/feautures/counter';
 import About from '../about';
 
+import { HomeWrapper } from './style';
+
 interface IProps {
   children?: ReactNode;
 }
@@ -25,7 +27,7 @@ const Home: FC<IProps> = () => {
   };
 
   return (
-    <div>
+    <HomeWrapper>
       <div>当前计数：{count}</div>
       <div>当前消息：{message}</div>
       <button onClick={handelMessage}>修改消息</button>
@@ -35,7 +37,7 @@ const Home: FC<IProps> = () => {
       <button onClick={() => handelCount(-10)}>-10</button>
       <hr />
       <About name="aaaa" age={100} />
-    </div>
+    </HomeWrapper>
   );
 };
 
