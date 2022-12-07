@@ -9,10 +9,13 @@ const counterSlice = createSlice({
   reducers: {
     changeMessageAction(state, { payload }) {
       state.message = payload;
+    },
+    changeCountAction(state, { payload }) {
+      state.count = state.count + payload;
     }
   }
 });
 
-export const { changeMessageAction } = counterSlice.actions;
+export const { changeMessageAction, changeCountAction } = counterSlice.actions;
 
 export default counterSlice.reducer;

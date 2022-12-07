@@ -13,10 +13,11 @@ module.exports = {
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://baidu.com',
+        target: process.env.NODE_ENV === 'development' ? 'baidu.com' : 'baidu.com',
         pathRewrite: {
           '^/api': ''
         },
+        secure: false,
         changeOrigin: true
       }
     }

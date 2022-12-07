@@ -19,6 +19,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
     'no-empty-function': 1, // 禁止出现空函数
     'jsx-a11y/anchor-is-valid': 'off' //注销a标签的警告
